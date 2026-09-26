@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>How to Design eLearning for Complex Decisions</title>
+
+  <meta
+    name="description"
+    content="Learn how to create realistic eLearning scenarios that help employees weigh evidence, understand trade-offs and make sound workplace decisions."
+  >
+
+  <style>
+    :root {
+      --ink: #111827;
+      --muted: #52606d;
+      --blue: #1769e0;
+      --pale-blue: #edf5ff;
+      --dark-blue: #07111f;
+      --line: #dce4ec;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behaviour: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 18px 24px;
+      color: var(--white);
+      background: var(--dark-blue);
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 820px;
+      margin: auto;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    main {
+      max-width: 820px;
+      margin: auto;
+      padding: 64px 24px 72px;
+    }
+
+    article {
+      width: 100%;
+    }
+
+    .eyebrow {
+      margin-bottom: 10px;
+      color: var(--blue);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0.35em 0 0.25em;
+      font-size: clamp(2.1rem, 6vw, 3.7rem);
+      line-height: 1.08;
+    }
+
+    h2 {
+      margin-top: 2.2em;
+      font-size: 1.7rem;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin-top: 1.7em;
+      font-size: 1.2rem;
+    }
+
+    p,
+    li {
+      font-size: 1.05rem;
+    }
+
+    .standfirst {
+      color: var(--muted);
+      font-size: 1.3rem;
+      line-height: 1.55;
+    }
+
+    a {
+      color: #075fc8;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: #034a9e;
+    }
+
+    ul,
+    ol {
+      padding-left: 1.4rem;
+    }
+
+    li {
+      margin: 0.55rem 0;
+    }
+
+    .callout {
+      margin: 32px 0;
+      padding: 22px 24px;
+      background: var(--pale-blue);
+      border-left: 5px solid var(--blue);
+    }
+
+    blockquote {
+      margin: 30px 0;
+      padding: 22px 24px;
+      color: #243142;
+      background: #f5f7fa;
+      border-left: 5px solid var(--blue);
+    }
+
+    blockquote p {
+      margin: 0;
+    }
+
+    .cta {
+      margin-top: 46px;
+      padding: 28px;
+      color: var(--white);
+      background: var(--dark-blue);
+      border-radius: 10px;
+    }
+
+    .cta h2 {
+      margin-top: 0;
+    }
+
+    .cta a {
+      color: #9bc7ff;
+    }
+
+    footer {
+      padding: 30px 24px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding-top: 42px;
+      }
+
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      h1 {
+        font-size: 2.35rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .standfirst {
+        font-size: 1.15rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a
+        class="brand"
+        href="https://ponchoelearning.github.io/"
+      >
+        Poncho Learning Notes
+      </a>
+
+      <a href="https://ponchoelearning.github.io/">
+        Home
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <p class="eyebrow">Scenario-based learning</p>
+
+      <h1>
+        How to Design eLearning for Decisions With No Perfect Answer
+      </h1>
+
+      <p class="standfirst">
+        A practical guide to creating realistic scenarios that help
+        employees weigh evidence, recognise trade-offs and make sound
+        workplace decisions.
+      </p>
+
+      <p>
+        Some workplace decisions have one clear answer. A safety step
+        must be followed. A required field must be completed. A specific
+        person must approve the request.
+      </p>
+
+      <p>
+        Other decisions are less straightforward.
+      </p>
+
+      <p>
+        An employee may need to balance customer needs with company
+        policy. A manager may need to protect a deadline while supporting
+        a team member. A compliance officer may need to act with
+        incomplete information.
+      </p>
+
+      <p>
+        In these situations, several responses may appear reasonable.
+        The learner must decide which priority matters most and explain why.
+      </p>
+
+      <p>
+        This is where scenario-based eLearning becomes useful. A
+        well-designed scenario does not ask learners to guess what the
+        course writer wants. It gives them a safe place to examine
+        evidence, consider consequences and practise making a defensible
+        choice.
+      </p>
+
+      <div class="callout">
+        <strong>A useful rule:</strong> If experienced employees could
+        reasonably discuss the answer, the activity should assess the
+        quality of the learner’s reasoning, not only the option they select.
+      </div>
+
+      <h2>Start with a real decision, not a broad topic</h2>
+
+      <p>
+        “Improve leadership skills” is too broad for one activity.
+      </p>
+
+      <p>
+        “Respond when a capable employee repeatedly misses deadlines”
+        gives the design team something more useful. It identifies a
+        situation, a decision-maker and a performance problem.
+      </p>
+
+      <p>
+        When planning the course, speak with subject matter experts and
+        people who perform the role. Ask where valid priorities come into
+        conflict.
+      </p>
+
+      <p>You may uncover decisions such as:</p>
+
+      <ul>
+        <li>
+          Resolve a complaint quickly or investigate it more fully.
+        </li>
+
+        <li>
+          Keep a project moving or pause to address a possible safety risk.
+        </li>
+
+        <li>
+          Apply a policy consistently or account for unusual circumstances.
+        </li>
+
+        <li>
+          Protect confidential information or share enough detail to
+          obtain help.
+        </li>
+
+        <li>
+          Support an employee or address an ongoing performance problem.
+        </li>
+      </ul>
+
+      <p>
+        These are useful learning moments because experienced employees
+        may approach them differently. The goal is not always to teach
+        one fixed answer. It may be to teach a reliable decision process.
+      </p>
+
+      <p>
+        The
+        <a
+          href="https://www.cdc.gov/training-development/php/about/assess-training-needs-conducting-needs-analysis.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CDC’s guidance on assessing training needs
+        </a>
+        recommends defining the expected learning outcome before choosing
+        the solution. For a judgement task, the outcome should describe
+        what a sound decision looks like.
+      </p>
+
+      <p>For example, the learner may need to:</p>
+
+      <ul>
+        <li>Gather important missing information.</li>
+        <li>Identify the main risk.</li>
+        <li>Consult the right person.</li>
+        <li>Apply agreed decision criteria.</li>
+        <li>Record and explain the decision.</li>
+        <li>Take an appropriate next step.</li>
+      </ul>
+
+      <p>
+        A clear outcome keeps the scenario focused on performance rather
+        than entertainment.
+      </p>
+
+      <h2>Give the learner enough context to think</h2>
+
+      <p>
+        A realistic scenario needs context. However, realism does not
+        mean adding every available detail.
+      </p>
+
+      <p>
+        Give learners the information that would influence the decision:
+      </p>
+
+      <ul>
+        <li>What has happened?</li>
+        <li>Who is involved or affected?</li>
+        <li>What information is known?</li>
+        <li>What information is missing?</li>
+        <li>What rules or goals apply?</li>
+        <li>What time pressure exists?</li>
+        <li>What could happen next?</li>
+      </ul>
+
+      <p>
+        Remove details that do not change the choice. Decorative
+        complexity makes an activity harder to read without making it
+        more valuable.
+      </p>
+
+      <p>
+        Imagine a customer service scenario. The learner receives a
+        complaint from a long-term customer whose refund request falls
+        outside the usual policy.
+      </p>
+
+      <p>The learner may need to know:</p>
+
+      <ul>
+        <li>How far outside the policy the request sits</li>
+        <li>Why the customer could not submit it sooner</li>
+        <li>Whether the employee can approve an exception</li>
+        <li>Whether similar exceptions have been made</li>
+        <li>What evidence the customer has provided</li>
+      </ul>
+
+      <p>
+        The customer’s favourite colour or unrelated purchase history
+        does not help the learner decide.
+      </p>
+
+      <p>
+        Official
+        <a
+          href="https://www.gov.uk/government/publications/exercising-best-practice-guidance/exercising-best-practice-guidance-html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GOV.UK exercise guidance
+        </a>
+        also explains that realistic scenarios help participants test
+        practical skills and understand the effects of their actions.
+        It advises designers to let clear objectives drive the scenario.
+      </p>
+
+      <h2>Write options that a real person might choose</h2>
+
+      <p>
+        Weak scenarios often have one sensible option and three careless
+        or absurd choices.
+      </p>
+
+      <p>
+        Learners can pass these activities by noticing the writing
+        pattern. They do not need to apply workplace judgement.
+      </p>
+
+      <p>
+        Instead, build each option around a believable line of reasoning.
+      </p>
+
+      <p>
+        Consider a manager dealing with a missed deadline. The manager
+        could:
+      </p>
+
+      <ol>
+        <li>
+          Address the issue immediately to protect the project.
+        </li>
+
+        <li>
+          Ask what caused the delay and whether support is needed.
+        </li>
+
+        <li>
+          Wait for another missed deadline to avoid overreacting.
+        </li>
+
+        <li>
+          Move the work to another employee to reduce short-term risk.
+        </li>
+      </ol>
+
+      <p>
+        Each option has an understandable motive. One protects the
+        deadline. Another seeks context. A third avoids unnecessary
+        conflict. The last reduces immediate delivery risk.
+      </p>
+
+      <p>
+        The options should not be equally strong, but they should all be
+        plausible.
+      </p>
+
+      <p>
+        Ask subject matter experts whether they have seen people choose
+        each response. If nobody would realistically select an option,
+        rewrite it.
+      </p>
+
+      <h2>Define what makes a decision stronger</h2>
+
+      <p>
+        Before writing the feedback, agree on the criteria for a sound
+        decision.
+      </p>
+
+      <p>These criteria may come from:</p>
+
+      <ul>
+        <li>Organisational policy</li>
+        <li>Professional standards</li>
+        <li>Safety requirements</li>
+        <li>Customer commitments</li>
+        <li>Established expert practice</li>
+        <li>The limits of the employee’s authority</li>
+      </ul>
+
+      <p>Depending on the task, a strong response may:</p>
+
+      <ul>
+        <li>Manage immediate risk.</li>
+        <li>Collect important missing information.</li>
+        <li>Stay within the employee’s authority.</li>
+        <li>Consider the people affected.</li>
+        <li>Follow the required process.</li>
+        <li>Create a clear record.</li>
+        <li>Include an appropriate escalation or follow-up.</li>
+      </ul>
+
+      <p>
+        These criteria give the design team a consistent way to compare
+        responses. They also stop feedback from becoming “This is correct
+        because the course says so.”
+      </p>
+
+      <p>
+        If two responses are both acceptable, say so. Explain why one may
+        be stronger under the conditions shown.
+      </p>
+
+      <h2>Show believable consequences</h2>
+
+      <p>
+        Consequences help learners connect a choice with its likely effect.
+      </p>
+
+      <p>
+        They do not need to be dramatic. In fact, exaggerated
+        consequences can make the learning less credible.
+      </p>
+
+      <p>
+        A poor customer response may lead to repeat contact or a manager
+        escalation. It does not need to create an instant public crisis.
+      </p>
+
+      <p>
+        A weak coaching question may cause an employee to become guarded.
+        It does not need to make them resign immediately.
+      </p>
+
+      <p>Show consequences through:</p>
+
+      <ul>
+        <li>A short follow-up scene</li>
+        <li>A message from another person</li>
+        <li>A change in the customer’s response</li>
+        <li>A project status update</li>
+        <li>A manager’s observation</li>
+        <li>A brief explanation from the course</li>
+      </ul>
+
+      <p>
+        The consequence should be proportionate and connected to the
+        choice. Learners need to understand which part of their decision
+        produced the result.
+      </p>
+
+      <p>
+        For another practical perspective on demonstrating expert
+        thinking, read
+        <a
+          href="https://ponchoelearning.substack.com/p/why-worked-examples-belong-in-workplace-elearning"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Why Worked Examples Belong in Workplace eLearning
+        </a>
+        on the Poncho eLearning Substack.
+      </p>
+
+      <h2>Explain the trade-off in the feedback</h2>
+
+      <p>
+        “Correct” and “incorrect” are often too blunt for judgement-based
+        activities.
+      </p>
+
+      <p>Useful feedback should:</p>
+
+      <ol>
+        <li>Recognise the learner’s likely intention.</li>
+        <li>Identify what the response handles well.</li>
+        <li>Explain the risk or information it overlooks.</li>
+        <li>Suggest a stronger next step.</li>
+      </ol>
+
+      <p>For example:</p>
+
+      <blockquote>
+        <p>
+          Your response protects the deadline, but it acts before you know
+          why the work is late. Start with a short conversation to confirm
+          the cause. You can then agree on a recovery plan with clear
+          responsibilities and dates.
+        </p>
+      </blockquote>
+
+      <p>
+        This feedback does not dismiss the learner’s reasoning.
+        Protecting the deadline is a valid concern. The problem is acting
+        before collecting essential information.
+      </p>
+
+      <p>Compare that with:</p>
+
+      <blockquote>
+        <p>
+          Incorrect. You should speak with the employee first.
+        </p>
+      </blockquote>
+
+      <p>
+        The second response identifies the preferred answer but teaches
+        very little. It does not explain why the learner’s choice was
+        weaker or how to improve it.
+      </p>
+
+      <h2>Let learners compare different approaches</h2>
+
+      <p>
+        Judgement improves when people can compare their reasoning with
+        another approach.
+      </p>
+
+      <p>
+        After the learner responds, show how an experienced employee might
+        handle the same situation. Explain what that person notices, what
+        they prioritise and what they would do next.
+      </p>
+
+      <p>
+        Avoid presenting the expert as someone who always knows the answer
+        immediately. Good decision-makers often pause, collect information
+        and test their assumptions.
+      </p>
+
+      <p>You can ask learners:</p>
+
+      <ul>
+        <li>Which fact had the most influence on your choice?</li>
+        <li>What information would you seek before acting?</li>
+        <li>Which risk did you prioritise?</li>
+        <li>What might make another option more suitable?</li>
+        <li>What would you record or communicate after deciding?</li>
+      </ul>
+
+      <p>
+        These questions help learners examine how they reached the answer,
+        not only whether they selected the preferred option.
+      </p>
+
+      <h2>Give learners another attempt</h2>
+
+      <p>
+        When a decision is complex, one attempt may not be enough.
+      </p>
+
+      <p>After showing feedback, allow the learner to:</p>
+
+      <ul>
+        <li>Revise the original choice.</li>
+        <li>Continue from the consequence.</li>
+        <li>Request more information.</li>
+        <li>Try a similar situation with one changed condition.</li>
+        <li>Compare two acceptable responses.</li>
+      </ul>
+
+      <p>
+        Changing one detail can be particularly useful.
+      </p>
+
+      <p>
+        A manager may choose one response when a deadline is flexible and
+        another when a safety-critical task is already late. A customer
+        service employee may handle a minor exception differently from
+        one involving possible fraud.
+      </p>
+
+      <p>
+        These variations show learners that good judgement depends on
+        context.
+      </p>
+
+      <h2>Do not hide uncertainty</h2>
+
+      <p>
+        Some courses remove uncertainty because stakeholders want every
+        activity to have a clear correct answer.
+      </p>
+
+      <p>
+        That may make scoring easier, but it can distort the work.
+      </p>
+
+      <p>
+        If a real decision depends on missing information, allow the
+        learner to request that information. If different policies could
+        lead to different responses, name the assumption used in the
+        activity.
+      </p>
+
+      <p>
+        You can also explain that several actions may be defensible if
+        they meet the required criteria.
+      </p>
+
+      <p>
+        This does not mean accepting every response. Some choices will
+        still create unnecessary risk, ignore important evidence or
+        exceed the employee’s authority.
+      </p>
+
+      <p>
+        The aim is to be clear about why a response is stronger.
+      </p>
+
+      <h2>Assess reasoning as well as the final choice</h2>
+
+      <p>
+        A score can show whether someone selected the preferred option.
+        It cannot always show why.
+      </p>
+
+      <p>
+        For important decisions, add a small prompt that asks the learner
+        to explain their reasoning.
+      </p>
+
+      <p>They might answer:</p>
+
+      <ul>
+        <li>What was the main risk?</li>
+        <li>Which piece of information influenced your decision?</li>
+        <li>Who would you involve next?</li>
+        <li>What would you document?</li>
+        <li>How confident are you in this choice?</li>
+      </ul>
+
+      <p>
+        The response does not need to be an essay. One or two focused
+        questions can reveal whether the learner noticed the important
+        facts and applied the agreed criteria.
+      </p>
+
+      <p>
+        For higher-risk tasks, online learning may need to be followed by
+        discussion, observation or supervised practice. A digital
+        scenario can provide preparation and consistency, but it should
+        not be expected to prove every aspect of workplace competence.
+      </p>
+
+      <h2>Review scenarios with the people who do the work</h2>
+
+      <p>
+        A scenario may look realistic to the project team but feel
+        artificial to employees.
+      </p>
+
+      <p>
+        Before publishing, ask representative learners and subject matter
+        experts to review it.
+      </p>
+
+      <p>Check whether:</p>
+
+      <ul>
+        <li>The situation could genuinely occur.</li>
+        <li>
+          The learner has the information they would normally have.
+        </li>
+        <li>The language sounds natural.</li>
+        <li>The options reflect believable behaviour.</li>
+        <li>The consequences are proportionate.</li>
+        <li>The feedback explains the decision clearly.</li>
+        <li>The preferred response fits the learner’s authority.</li>
+      </ul>
+
+      <p>
+        Pay attention when reviewers disagree. Their disagreement may
+        reveal that the policy is unclear, expert practice varies or the
+        scenario does not contain enough information.
+      </p>
+
+      <p>
+        That is useful project feedback. Training cannot resolve an
+        organisational problem that has no agreed answer.
+      </p>
+
+      <h2>Design for better judgement at work</h2>
+
+      <p>
+        Decisions with no perfect answer are difficult because they
+        involve competing priorities.
+      </p>
+
+      <p>
+        Good eLearning does not hide that tension. It makes the tension
+        safe to explore.
+      </p>
+
+      <p>
+        Start with a real decision. Provide only the context that matters.
+        Write believable options, show proportionate consequences and
+        explain the trade-offs. Then give learners a chance to compare,
+        reflect and try again.
+      </p>
+
+      <p>
+        The result is not a course that simply tells people what to
+        think. It is a learning experience that helps them make a sound
+        choice when the right answer is not obvious.
+      </p>
+
+      <div class="cta">
+        <h2>Explore more workplace learning ideas</h2>
+
+        <p>
+          Visit the
+          <a href="https://ponchoelearning.github.io/">
+            Poncho Learning Notes home page
+          </a>
+          for more practical ideas on designing useful workplace
+          eLearning.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    Practical notes on workplace learning from Poncho eLearning.
+  </footer>
+</body>
+</html>
